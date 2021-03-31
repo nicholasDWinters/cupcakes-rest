@@ -9,6 +9,16 @@ async function getCupcakes() {
             const newItem = document.createElement('li');
             newItem.innerText = `Flavor: ${cupcake.flavor} - Size: ${cupcake.size} - Rating: ${cupcake.rating}`;
             newItem.classList.add('listItem');
+            newItem.classList.add('mb-4');
+
+            if (cupcake.image) {
+                const newImage = document.createElement('img');
+                newImage.src = `${cupcake.image}`;
+                newImage.classList.add('cupcakeImg');
+                newItem.appendChild(newImage);
+            }
+
+
             list.appendChild(newItem);
         }
     } catch (e) {
@@ -29,6 +39,12 @@ formBtn.addEventListener('click', async function (e) {
     const newItem = document.createElement('li');
     newItem.innerText = `Flavor: ${cupcake.flavor} - Size: ${cupcake.size} - Rating: ${cupcake.rating}`;
     newItem.classList.add('listItem');
+    if (cupcake.image) {
+        const newImage = document.createElement('img');
+        newImage.src = `${cupcake.image}`;
+        newImage.classList.add('cupcakeImg');
+        newItem.appendChild(newImage);
+    }
     list.appendChild(newItem);
 
 })

@@ -5,3 +5,9 @@ h1 {
 .listItem {
     text-transform: capitalize;
 }
+
+.cupcakeImg {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
