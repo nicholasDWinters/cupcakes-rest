@@ -10,6 +10,11 @@ app.config['SQLALCHEMY_ECHO'] = True
 
 connect_db(app)
 
+@app.route('/')
+def home():
+    '''home page'''
+    return render_template('index.html')
+
 
 @app.route('/api/cupcakes')
 def all_cupcakes():
